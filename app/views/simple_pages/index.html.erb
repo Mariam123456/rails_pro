@@ -1,6 +1,36 @@
-<p>Welcome! The date and time is <%= Time.now %></p>
-<% test_variable = 42 %>
-<%= test_variable %>
-<%= test_variable - 2 %>
-<h1>Welcome to Bike Berlin</h1>
-<h2>Your source for used bikes in Berlin</h2>
+  <div class="container-fluid" id="Home">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                           <!-- Indicators -->
+                           <ol class="carousel-indicators">
+                              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                           </ol>
+                           <!-- Wrapper for slides -->
+                           <div class="carousel-inner" role="listbox">
+                              <div class="item active">
+                               
+
+            <%= image_tag("header-background.jpg", class: "img-responsive") %>
+                                 <div class="carousel-caption">
+                                   <h3> Hi , It's aweb development Page </h3>
+                                </div>
+                             </div>
+                             <div class="item">
+                            <%= image_tag("header-background.jpg", class: "img-responsive") %>
+                              <div class="carousel-caption">
+                                <h3> Hello Ruby world </h3>
+                             </div>
+                          </div>
+                       </div>
+                       <!-- Controls -->
+                       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                     </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                     </a>
+                </div>
+                <div class="container introduction-AboutMe img-background ">
+
