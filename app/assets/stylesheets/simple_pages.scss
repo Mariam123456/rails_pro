@@ -35,7 +35,7 @@ h1{
 
 footer {
     padding-top: 20px;
-    
+
     text-align: center;
     margin : auto 0;
 }
@@ -51,48 +51,98 @@ footer {
     display: inline;
 }
 
-
-.color-title h2{ 
- color: #FA8072; 
-}
-
-.More-about {
-    padding-top: 40px;
-    clear: both;
-}
-#AboutMe h2,
-#AboutMe h3,
-.More-about h3,
-{
-    font-size: 24px;
-    webkit-margin-before: 1em;
-    
-}
-
-#AboutMe p,
-#AboutMe ul,
-.More-about p {
-    color: white;
-    font-size: 15px;
-}
-
-#About {
-    background-color: black;
-    padding-top:10px;
+#About-market {
+    // background-color: black;
+    padding-top:100px;
+		width: 80%;
     margin: 0 auto;
     padding-bottom: 120px;
 }
-#imgAbout{
-    position: relative;
-    width: 120px;
-    height: 120px;
-    border-radius: 100%;
-    
+
+
+#header h3{
+	color: #212121;
+	padding-bottom: .5em;
+	position: relative;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	padding: 10px;
+	font-weight: 700;
 }
-.carousel-caption h3 {
+#headerAbout h3{
+	color: #212121;
+	padding-bottom: 30px;
+	padding: 10px;
+	font-weight:300;
+}
+#Aboutmarket p{
+	margin: 5px;
+}
+
+#main{
+width: 80%;
+background-color: #f0eded;
+height:105%;
+border: 1px solid blue;
+padding: 10px;
+padding-bottom: 20px;
+border-color: gray;
+margin-bottom: 50px;
+}
+
+#figure{
+	width: 500px;
+	border-width: 1px;
+
+}
+.img-centre{
+	margin: 0 auto;
+}
+.img-wi{
+	margin-left: -15px;
+	margin-right: -15px;
+
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+#img-product{
+	margin: 5px;
+}
+
+
+
+.blue-color{
+	color: blue;
+}
+#old-price{
+font-weight: 300;
+text-decoration: line-through;
+padding-left: 1em;
+}
+.button-buy{
+font-size: 15px;
+padding: 7px;
+color: #fff;
+background:gray;
+text-decoration: none;
+position: relative;
+border: none;
+border-radius: 0;
+width: 50%;
+text-transform: uppercase;
+// padding: .5em 0;
+outline: none;
+padding-bottom: 5px;
+}
+
+
+.carousel-caption  {
     font: 300 18px/24px 'Open Sans', sans-serif;
-    font-size: 60px;
+    font-size: 30px;
     font-style: normal;
+		font-family: 'Tangerine', cursive;
     font-variant: normal;
     font-weight: 600;
     line-height: 50px;
@@ -110,7 +160,16 @@ footer {
     color: white;
 }
 #contact{
-	width:50%;
 	padding-top:100px;
-	margin : auto 0;
+	margin : 10px;
+	width:80%;
+}
+
+.newproduct{
+	margin-top: 20px;
+}
+#headerpro{
+	padding-top: 50px;
+	font-weight: 300;
+	font-size: 30px;
 }

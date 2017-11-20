@@ -1,4 +1,3 @@
 class SimplePagesController < ApplicationController
-  def index
-  end
+  def index; end
 end

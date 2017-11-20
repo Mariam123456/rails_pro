@@ -1,74 +1,100 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Myapp</title>
+  <head>
+    <title>Myapp</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <!-- Bootstrap core JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <%= csrf_meta_tags %>
+    <%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-
-
-  
-</head>
-<body data-spy="scroll" data-target=".navbar">
-  <nav class="navbar navbar-inverse navbar-fixed-top navbar-right" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".navbar">
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-right" role="navigation">
+      <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="projectName-na navbar-brand">
-            <a href="#">Eng.Mariam</a>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="projectName-na navbar-brand">
+              <%= image_tag("logo.png", class: "img-responsive") %>
+            </div>
+            <!--end projectName -->
           </div>
-          <!--end projectName -->
-        </div>
-        <!--end navbar-header -->
-        <div class="collapse navbar-collapse navbar-right" id="collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="">Home </a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#contact">contact</a></li>
-            <li><a href="#FAQ">faq</a></li>
-            <li>
-              <a href="#work">
-                work
+          <!--end navbar-header -->
+          <div class="collapse navbar-collapse navbar-right" id="collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active">
+                <a href="index">Home
+                </a>
+              </li>
+              <li>
+                <a href="about">About</a>
+              </li>
+              <li>
+                <a href="contact">contact</a>
+              </li>
+              <li>
+                <a href="product">New Product</a>
               </li>
             </ul>
             <div>
-             <div> <!--end navbar container-->
-             </nav>
+              <div>
+                <!--end navbar container-->
+              </nav>
 
-         <%= yield %>
- <div class="container-fluid" >
-         <footer>
-          <div class="social">
-            <!-- 4:3 aspect ratio -->
-            <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/suhbetjanna/" data-width="64" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=931&amp;href=https%3A%2F%2Fwww.facebook.com%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=true&amp;size=small&amp;width=64"><span style="vertical-align: bottom; width: 50px; height: 20px;"><iframe name="f3bfda57b2dccbc" width="64px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="https://www.facebook.com/v2.10/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FhsBwMj6iLmk.js%3Fversion%3D42%23cb%3Dfc4419a0a0e47c%26domain%3Dmichalgarvey.bitballoon.com%26origin%3Dhttp%253A%252F%252Fmichalgarvey.bitballoon.com%252Ffe7a24a5f7be4%26relation%3Dparent.parent&amp;container_width=931&amp;href=https%3A%2F%2Fwww.facebook.com%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=true&amp;size=small&amp;width=64" style="border: none; visibility: visible; width: 50px; height: 20px;" class=""></iframe></span>
-              <a class="twitter-follow-button" href="https://twitter.com/abd120071664" data-show-count="false" data-show-screen-name="false">Follow @ENG.MARIAM</a>
-            </div>
-            &copy ENG.MARIAM
-          </div>
-          <!--?<span class="hiddenSpellError" pre="" data-mce-bogus="1">php</span> esc_html_e( 'LinkedIn', '<span class="hiddenSpellError" pre="" data-mce-bogus="1">Divi</span>' ); ?-->
-        </footer>
-        </div>
+              <%= yield %>
+              <div class="container-fluid">
+                <footer>
+                  <div class="social">
+                    <!-- 4:3 aspect ratio -->
+                    <div
+                      class="fb-like fb_iframe_widget"
+                      data-href="https://www.facebook.com/suhbetjanna/"
+                      data-width="64"
+                      data-layout="button"
+                      data-action="like"
+                      data-size="small"
+                      data-show-faces="true"
+                      data-share="false"
+                      fb-xfbml-state="rendered"
+                      fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=931&amp;href=https%3A%2F%2Fwww.facebook.com%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=true&amp;size=small&amp;width=64">
+                      <span style="vertical-align: bottom; width: 50px; height: 20px;">
+                        <iframe
+                          name="f3bfda57b2dccbc"
+                          width="64px"
+                          height="1000px"
+                          frameborder="0"
+                          allowtransparency="true"
+                          allowfullscreen="true"
+                          scrolling="no"
+                          title="fb:like Facebook Social Plugin"
+                          src="https://www.facebook.com/v2.10/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FhsBwMj6iLmk.js%3Fversion%3D42%23cb%3Dfc4419a0a0e47c%26domain%3Dmichalgarvey.bitballoon.com%26origin%3Dhttp%253A%252F%252Fmichalgarvey.bitballoon.com%252Ffe7a24a5f7be4%26relation%3Dparent.parent&amp;container_width=931&amp;href=https%3A%2F%2Fwww.facebook.com%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=true&amp;size=small&amp;width=64"
+                          style="border: none; visibility: visible; width: 50px; height: 20px;"
+                          class=""></iframe>
+                      </span>
+                      <a class="twitter-follow-button" href="https://twitter.com/abd120071664" data-show-count="false" data-show-screen-name="false">Follow @ENG.MARIAM</a>
+                    </div>
+                    &copy FOOD CO
+                  </div>
+                  <!--?<span class="hiddenSpellError" pre="" data-mce-bogus="1">php</span> esc_html_e( 'LinkedIn', '<span class="hiddenSpellError" pre="" data-mce-bogus="1">Divi</span>' ); ?-->
+                </footer>
+              </div>
 
-      </body>
-      </html>
+            </body>
+          </html>
