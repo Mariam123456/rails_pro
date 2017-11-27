@@ -11,23 +11,27 @@
   </div>
 <% end %>
 
-<div class="field">
-  <%= form.label :name %>
-  <%= form.text_field :name, id: :product_name %>
+<div class="field" id="form-layout">
+  <%= form.label :name ,:class => "col-md-3 col-sm-12"%>
+  <%= form.text_field :name, id: :product_name ,:class => "col-md-9 col-sm-12" %>
 </div>
 
-<div class="field">
-  <%= form.label :description %>
-  <%= form.text_area :description, id: :product_description %>
+<div class="field" id="form-layout">
+  <%= form.label :description ,:class => "col-md-3 col-sm-12" %>
+  <%= form.text_area :description, id: :product_description ,:class => "col-md-9 col-sm-12"%>
 </div>
 
-<div class="field">
-  <%= form.label :image_url %>
-  <%= form.text_field :image_url, id: :product_image_url %>
+<div class="field" id="form-layout">
+  <%= form.label :image_url,:class => "col-md-3 col-sm-12" %>
+  <%= form.text_field :image_url, id: :product_image_url,:class => "col-md-9 col-sm-12" %>
 </div>
-<div class="field">
-  <%= form.label :prices %><br>
-  <%= form.text_field :prices %>
+<div class="field" id="form-layout">
+  <%= form.label :price,:class => "col-md-3 col-sm-12" %>
+  <%= form.text_field :price ,:class => "col-md-9 col-sm-12"%>
+</div>
+<div class="field" id="form-layout">
+  <%= form.label :colour ,:class => "col-md-3 col-sm-12" %>
+  <%= form.text_field :colour ,:class => "col-md-9 col-sm-12" %>
 </div>
 
 <div class="actions">
@@ -35,3 +39,4 @@
 </div>
 
 <% end %>
+</div>
