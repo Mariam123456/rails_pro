@@ -2,9 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1{
-	color :red ;
-}
+
 
 
 .nav {
@@ -38,6 +36,7 @@ footer {
 
     text-align: center;
     margin : auto 0;
+
 }
 .footer a:active {
     color: white;
@@ -69,14 +68,51 @@ footer {
 	padding: 10px;
 	font-weight: 700;
 }
-#headerAbout h3{
+.headerAbout h3{
 	color: #212121;
-	padding-bottom: 30px;
-	padding: 10px;
 	font-weight:300;
+	text-align: center;
+	padding-bottom: .5em;
+	position: relative;
+	font-size: 2.5em;
+	text-transform: uppercase;
 }
-#Aboutmarket p{
-	margin: 5px;
+#headercontact h3{
+	color: #212121;
+	font-weight:300;
+	text-align: center;
+	padding-bottom: .5em;
+	position: relative;
+	font-size: 2.5em;
+	text-transform: uppercase;
+}
+
+
+#Aboutmarket h4{
+	font-size: 1.5em;
+	color: #222;
+	letter-spacing: 4px;
+}
+#Aboutmarket p {
+font-size: 1em;
+color: #999;
+line-height: 1.8em;
+margin: 1em 0 2.5em;
+}
+
+.img-center{
+	margin: 0 auto;
+}
+.product-border{
+  width: 30%;
+  height: 100%;
+}
+
+
+
+
+.color-orange{
+	color: orange;
 }
 
 #main{
@@ -102,7 +138,6 @@ margin-bottom: 50px;
 .img-wi{
 	margin-left: -15px;
 	margin-right: -15px;
-
 	display: block;
 	max-width: 100%;
 	height: auto;
@@ -112,16 +147,16 @@ margin-bottom: 50px;
 	margin: 5px;
 }
 
-
-
 .blue-color{
 	color: blue;
 }
+
 #old-price{
 font-weight: 300;
 text-decoration: line-through;
 padding-left: 1em;
 }
+
 .button-buy{
 font-size: 15px;
 padding: 7px;
@@ -139,17 +174,16 @@ padding-bottom: 5px;
 }
 
 
-.carousel-caption  {
-    font: 300 18px/24px 'Open Sans', sans-serif;
-    font-size: 30px;
-    font-style: normal;
-		font-family: 'Tangerine', cursive;
-    font-variant: normal;
-    font-weight: 600;
-    line-height: 50px;
-    padding-bottom: 350px;
-    color: white;
-    lighting-color: red;
+.carousel-caption  h3 {
+  font: 300 18px/24px 'Open Sans', sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 600;
+  line-height: 50px;
+  padding-bottom: 350px;
+  color: white;
+  lighting-color: red;
 }
 .carousel {
     margin-left: -15px;
@@ -165,7 +199,13 @@ padding-bottom: 5px;
 	margin : 10px;
 	width:80%;
 }
-
+.list-contat{
+  margin:40px;
+  background-color: #f9f3f9;
+padding:10px ;
+border-radius: 10px;
+border: 1px solid #ECC2C2;
+}
 .newproduct{
 	margin-top: 20px;
 }

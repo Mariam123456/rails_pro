@@ -1,5 +1,5 @@
 #pro{
-  width: 80%;
+  width:80%;
   background-color: #f0eded;
   height:100%;
   border: 1px solid blue;
@@ -19,6 +19,28 @@
 #form-layout{
   padding: 10px;
 }
+.border1{
+  border: 1px solid gray;
+  border-radius: 1px;
+  margin: 15px;
+  background-color: white;
+
+}
+.title{
+  background-color:#efcdc8;
+  text-align: center;
+  padding: 2px;
+}
+
+.margin-auto{
+  margin: 0 auto;
+  text-align: center;
+}
+
+// @media (max-width: 480px) {
+//   .border1{
+//     margin: 5px;
+//   }
 
 
 
