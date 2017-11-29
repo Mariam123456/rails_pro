@@ -2,7 +2,7 @@
 <div class="container " id="About-market">
 <h2>Featured Product:</h2>
 <%= @featured_product.name %>
-<%= image_tag("5.png", class: "img-responsive") %>
+<%= image_tag(@featured_product.image_url, class: "img-responsive margin-auto") %>
 <br>
 <%= @featured_product.description %>
 </div>
