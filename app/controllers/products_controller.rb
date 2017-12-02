@@ -4,13 +4,15 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
-    @test_variable = 42
+    # @products = Product.all
+  @products = Product.limit(3)
+  # render layout: "products"
   end
 
   # GET /products/1
   # GET /products/1.json
-  def show; end
+  def show
+  end
 
   # GET /products/new
   def new
@@ -18,7 +20,8 @@ class ProductsController < ApplicationController
   end
 
   # GET /products/1/edit
-  def edit; end
+  def edit
+  end
 
   # POST /products
   # POST /products.json
