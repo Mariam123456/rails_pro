@@ -19,7 +19,5 @@
 //= require_self
 $(document).ready(function(){
   console.log("page loaded succesully");
-  $( "#message1" ).mousemove(function( event ) {
-  $("#message1").css("background-color", "red");
-  });
+
 });
