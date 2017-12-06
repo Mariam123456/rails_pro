@@ -5,7 +5,12 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     # @products = Product.all
-  @products = Product.limit(3)
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.search(search_term)
+    else
+      @products = Product.all
+    end
   # render layout: "products"
   end
 
@@ -30,7 +35,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to "/simple_pages/landing_page" }
+        format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }

@@ -2,179 +2,176 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-
 .nav {
-    background-color: black;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
+
 .nav ul li {
-    display: inline-block;
-    padding: 20px 10px 20px;
-    float: right;
+  display: inline-block;
+  padding: 20px 10px;
+  float: right;
 }
+
 .nav ul li a {
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    webkit-transition: color 600ms;
-    padding: 15px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  webkit-transition: color 600ms;
+  padding: 15px;
 }
+
 .nav a:hover {
-    color: #ff0;
-    text-decoration: none;
-    transition: color 600ms;
-    background-color: gray;
+  color: #ff0;
+  text-decoration: none;
+  transition: color 600ms;
+  background-color: gray;
 }
 
 footer {
-    padding-top: 20px;
-
-    text-align: center;
-    margin : auto 0;
-
+  padding-top: 20px;
+  text-align: center;
+  margin: auto 0;
 }
+
 .footer a:active {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
+
 .footer a:visited {
-    color: grey;
+  color: grey;
 }
+
 .social {
-    margin: 0 auto;
-    display: inline;
+  margin: 0 auto;
+  display: inline;
 }
 
 #About-market {
-    // background-color: black;
-    padding-top:100px;
-		width: 80%;
-    margin: 0 auto;
-    padding-bottom: 120px;
+  // background-color: black;
+  padding-top: 100px;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 120px;
 }
 
-
-#header h3{
-	color: #212121;
-	padding-bottom: .5em;
-	position: relative;
-	font-size: 2.5em;
-	text-transform: uppercase;
-	padding: 10px;
-	font-weight: 700;
-}
-.headerAbout h3{
-	color: #212121;
-	font-weight:300;
-	text-align: center;
-	padding-bottom: .5em;
-	position: relative;
-	font-size: 2.5em;
-	text-transform: uppercase;
-}
-#headercontact h3{
-	color: #212121;
-	font-weight:300;
-	text-align: center;
-	padding-bottom: .5em;
-	position: relative;
-	font-size: 2.5em;
-	text-transform: uppercase;
+#header h3 {
+  color: #212121;
+  padding-bottom: 0.5em;
+  position: relative;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  padding: 10px;
+  font-weight: 700;
 }
 
-
-#Aboutmarket h4{
-	font-size: 1.5em;
-	color: #222;
-	letter-spacing: 4px;
+.headerAbout h3 {
+  color: #212121;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 0.5em;
+  position: relative;
+  font-size: 2.5em;
+  text-transform: uppercase;
 }
+
+#headercontact h3 {
+  color: #212121;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 0.5em;
+  position: relative;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+#Aboutmarket h4 {
+  font-size: 1.5em;
+  color: #222;
+  letter-spacing: 4px;
+}
+
 #Aboutmarket p {
-font-size: 1em;
-color: #999;
-line-height: 1.8em;
-margin: 1em 0 2.5em;
+  font-size: 1em;
+  color: #999;
+  line-height: 1.8em;
+  margin: 1em 0 2.5em;
 }
 
-.img-center{
-	margin: 0 auto;
+.img-center {
+  margin: 0 auto;
 }
-.product-border{
+
+.product-border {
   width: 30%;
   height: 100%;
 }
 
-
-
-
-.color-orange{
-	color: orange;
+.color-orange {
+  color: orange;
 }
 
-#main{
-
-width: 80%;
-background-color: #f0eded;
-height:105%;
-border: 1px solid blue;
-padding: 10px;
-padding-bottom: 20px;
-border-color: gray;
-margin-bottom: 50px;
+#main {
+  width: 80%;
+  background-color: #f0eded;
+  height: 105%;
+  border: 1px solid blue;
+  padding: 10px 10px 20px;
+  border-color: gray;
+  margin-bottom: 50px;
 }
 
-#figure{
-	width: 500px;
-	border-width: 1px;
-
-}
-.img-centre{
-	margin: 0 auto;
-}
-.img-wi{
-	margin-left: -15px;
-	margin-right: -15px;
-	display: block;
-	max-width: 100%;
-	height: auto;
+#figure {
+  width: 500px;
+  border-width: 1px;
 }
 
-#img-product{
-	margin: 5px;
+.img-centre {
+  margin: 0 auto;
 }
 
-.blue-color{
-	color: blue;
+.img-wi {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-#old-price{
-font-weight: 300;
-text-decoration: line-through;
-padding-left: 1em;
+#img-product {
+  margin: 5px;
 }
 
-.button-buy{
-font-size: 15px;
-padding: 7px;
-color: #fff;
-background:gray;
-text-decoration: none;
-position: relative;
-border: none;
-border-radius: 0;
-width: 50%;
-text-transform: uppercase;
-// padding: .5em 0;
-outline: none;
-padding-bottom: 5px;
+.blue-color {
+  color: blue;
 }
 
+#old-price {
+  font-weight: 300;
+  text-decoration: line-through;
+  padding-left: 1em;
+}
 
-.carousel-caption  h3 {
+.button-buy {
+  font-size: 15px;
+  padding: 7px;
+  color: #fff;
+  background: gray;
+  text-decoration: none;
+  position: relative;
+  border: none;
+  border-radius: 0;
+  width: 50%;
+  text-transform: uppercase; // padding: .5em 0;
+  outline: none;
+  padding-bottom: 5px;
+}
+
+.carousel-caption h3 {
   font: 300 18px/24px 'Open Sans', sans-serif;
   font-size: 60px;
   font-style: normal;
@@ -185,162 +182,210 @@ padding-bottom: 5px;
   color: white;
   lighting-color: red;
 }
+
 .carousel {
-    margin-left: -15px;
-    margin-right: -15px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-#contactform{
-    padding-top: 30px;
-    color: white;
+#contactform {
+  padding-top: 30px;
+  color: white;
 }
-#contact{
-	padding-top:100px;
-	margin : 10px;
-	width:80%;
+
+#contact {
+  padding-top: 100px;
+  margin: 10px;
+  width: 80%;
 }
-.list-contat{
-  margin:40px;
+
+.list-contat {
+  margin: 40px;
   background-color: #f9f3f9;
-padding:10px ;
-border-radius: 10px;
-border: 1px solid #ECC2C2;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ECC2C2;
 }
 
-
-
-.newproduct{
-	margin-top: 20px;
-}
-#headerpro{
-	padding-top: 50px;
-	font-weight: 300;
-	font-size: 30px;
+.newproduct {
+  margin-top: 20px;
 }
 
-
+#headerpro {
+  padding-top: 50px;
+  font-weight: 300;
+  font-size: 30px;
+}
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
-.col-item
-{
-    border: 1px solid #E1E1E1;
-    border-radius: 5px;
-    background: #FFF;
-}
-.col-item .photo img
-{
-    margin: 0 auto;
-    width: 100%;
+
+.col-item {
+  border: 1px solid #E1E1E1;
+  border-radius: 5px;
+  background: #FFF;
 }
 
-.col-item .info
-{
-    padding: 10px;
-    border-radius: 0 0 5px 5px;
-    margin-top: 1px;
+.col-item .photo img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.col-item .info {
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+  margin-top: 1px;
 }
 
 .col-item:hover .info {
-    background-color: #F5F5DC;
+  background-color: #F5F5DC;
 }
-.col-item .price
-{
-    /*width: 50%;*/
+
+.col-item .price {
+  /*width: 50%;*/
+  float: left;
+  margin-top: 5px;
+}
+
+.col-item .price h5 {
+  line-height: 20px;
+  margin: 0;
+}
+
+.price-text-color {
+  color: #219FD1;
+}
+
+.col-item .info .rating {
+  color: #777;
+}
+
+.col-item .rating {
+  /*width: 50%;*/
+  float: left;
+  font-size: 17px;
+  text-align: right;
+  line-height: 52px;
+  margin-bottom: 10px;
+  height: 52px;
+}
+
+.col-item .separator {
+  border-top: 1px solid #E1E1E1;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.col-item .separator p {
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.col-item .separator p i {
+  margin-right: 5px;
+}
+
+.col-item .btn-add {
+  width: 50%;
+  float: left;
+}
+
+.col-item .btn-add {
+  border-right: 1px solid #E1E1E1;
+}
+
+.col-item .btn-details {
+  width: 50%;
+  float: left;
+  padding-left: 10px;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+[data-slide="prev"] {
+  margin-right: 10px;
+}
+input[type="submit"],#PPMiniCart .minicart-submit,.w3ls_vegetables ul li a,input[type="reset"],.agileinfo_mail_grid_left ul li a,.events_bottom_left2 ul li a,.w3ls_service_grids1_right a,ul.agileits_social_icons li a,.w3l_banner_nav_right_banner_pet a,.w3ls_w3l_banner_nav_right_grid_head_grid ul li a,.products-breadcrumb ul li a,.w3_footer_grid ul li a,.w3l_fresh_vegetables_grid ul li a,.wthree_footer_copy p a,.agile_top_brand_left_grid1 .button,.w3ls_logo_products_left1 ul.special_items li a,.w3ls_logo_products_left1 ul.phone_email li a{
+	transition: .5s ease-in;
+	-webkit-transition: .5s ease-in;
+	-moz-transition: .5s ease-in;
+	-o-transition: .5s ease-in;
+	-ms-transition: .5s ease-in;
+}
+.agileits_header {
+    background: #333333;
+    padding: 12px 0;
+}
+.w3l_offers {
     float: left;
-    margin-top: 5px;
+    padding: 9px 0;
+	width: 47%;
 }
-
-.col-item .price h5
-{
-    line-height: 20px;
-    margin: 0;
+.w3l_offers p {
+    font-size: 15px;
+    color: #fff;
 }
-
-.price-text-color
-{
-    color: #219FD1;
+.w3l_offers p a {
+    color: #fe9126;
+    text-decoration: none;
 }
-
-.col-item .info .rating
-{
-    color: #777;
+.w3l_search {
+    float: right;
+    width: 25.33%;
+    margin: 0em 0 0em 0em;
 }
-
-.col-item .rating
-{
-    /*width: 50%;*/
-    float: left;
-    font-size: 17px;
-    text-align: right;
-    line-height: 52px;
-    margin-bottom: 10px;
-    height: 52px;
+.w3l_search input[type="search"] {
+    width: 83%;
+    padding:10px;
+    font-size: 14px;
+    color: #999;
+    outline: none;
+    border: 1px solid #cccccc;
+    background: none;
+    -webkit-appearance: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
 }
-
-.col-item .separator
-{
-    border-top: 1px solid #E1E1E1;
-}
-
-.clear-left
-{
-    clear: left;
-}
-
-.col-item .separator p
-{
-    line-height: 20px;
-    margin-bottom: 0;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.col-item .separator p i
-{
+i.fa.fa-angle-right {
+    font-size: 15px;
     margin-right: 5px;
 }
-.col-item .btn-add
-{
-    width: 50%;
-    float: left;
-}
-
-.col-item .btn-add
-{
-    border-right: 1px solid #E1E1E1;
-}
-
-.col-item .btn-details
-{
-    width: 50%;
-    float: left;
-    padding-left: 10px;
-}
-.controls
-{
-    margin-top: 20px;
-}
-[data-slide="prev"]
-{
+i.fa.fa-phone {
     margin-right: 10px;
+    font-size: 20px;
+}
+button.btn.btn-default.search {
+    background: #fe9126;
+    padding: 11px 12px 11px;
+    float: right;
+    outline: none;
+    border: none;
+}
+button.btn.btn-default.search:hover {
+    background:#333;
+
 }
 
-#landing_page-container{
+#landing_page-container {
   padding-top: 100px;
 }
-
 @media (max-width: 480px) {
-  .list-contat h4{
-font-size: 10px;
-  }
-  .list-contat
-  {
-margin:0px;
-margin-top: 10px;
-padding:0px ;
+  .list-contat h4 {
+    font-size: 10px;
   }
 
-    .carousel-caption h3 {
-        padding-bottom: 0;
-        font-size: 18px;
-    }
+  .list-contat {
+    margin: 10px 0 0;
+    padding: 0;
+  }
+
+  .carousel-caption h3 {
+    padding-bottom: 0;
+    font-size: 18px;
+  }
 }
