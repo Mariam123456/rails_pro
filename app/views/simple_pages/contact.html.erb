@@ -5,29 +5,26 @@
 
   <div class="row">
     <div class="col-md-6 col-xs-12">
-      <form action="#" method="post" name="contact">
-        <div class="form-group">
-          <div class="lablename">
-            <label for="Name">Name:</label>
-          </div>
-          <input name="contactname" minlength="4" maxlength="20" type="text" class="form-control" placeholder="Enter your name here" id="contactname" title="Input your name here.">
-        </div>
-        <div class="form-group">
-          <div class="labelemail">
-            <label for="Email">Email address:
-            </label>
-          </div>
-          <input name="contactname" minlength="5" maxlength="30" title="Input Email Address here" type="email" required="required" class="form-control" placeholder="Enter your email here" id="email1">
-        </div>
-        <textarea minlength="5" maxlength="500" title="Input message you would like to send me here." required="required" id="message1" placeholder="Leave your message here" class="form-control message-box" style="resize:none" cols="40" rows="5"></textarea>
-        <p id="visible-comment"></p>
-        <center>
-          <p id="char-count"></p>
-        </center>
+  
+      <%= flash[:notice] %>
 
-        <button id="buttonsubmit" type="submit" class="btn btn-default">Submit</button>
-
-      </form>
+<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+<div class="row">
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+  </div>
+</div>
+<%= form.submit "Send", class: "form_label" %>
+<% end %>
     </div>
     <div class="col-md-6 col-xs-12">
       <div class="list-contat">

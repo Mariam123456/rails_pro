@@ -1,4 +1,4 @@
-  $(document).ready(function() {
+$( document ).on('turbolinks:load', function() {
 
   $("#message1").css("background-color", "#FFF5EE");
   $(".form-control").css("background-color", "#FFF5EE");
@@ -29,7 +29,7 @@
   }
 });
 
-  $(document).ready(function() {
+$( document ).on('turbolinks:load', function() {
 
     ! function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0],
