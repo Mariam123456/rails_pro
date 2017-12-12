@@ -39,10 +39,9 @@
           </div>
           <!--end navbar-header -->
           <div class="collapse navbar-collapse navbar-left" id="collapse">
-            <ul class="nav navbar-nav navbar-left">
+            <ul class="nav navbar-nav navbar-right">
               <li class="active">
-                <a href="index">Home
-                </a>
+                <%= link_to 'Home', '/simple_pages/index' %>
               </li>
               <li>
                 <a href="/simple_pages/about">About</a>
@@ -56,58 +55,65 @@
               <li>
                 <a href="/orders">orders</a>
               </li>
-            </ul>
-          </div>
 
-        </div>
-      </nav>
-      <div class="container " style="width: 100%;  margin-top:70px; padding:10px">
-    <center>
+              <li>
+                <% if user_signed_in? %>
+                  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                <% else %>
+                  <%= link_to('Login', new_user_session_path) %>
+                <% end %>
+              </li>
+
+              <li style="padding-left:100px;">
                 <%= form_with(url: products_path, method: 'get', local: true) do |form|%>
-                <%= form.label :q, 'Search for:' %>
-                <%= form.text_field :q, id: 'q', value: params[:q] %>
-                <%= form.submit 'Search' %>
+                <%= form.text_field :q, id: 'q', value: params[:q],:class=>"input",placeholder: "Search for"%>
+                <%= form.submit 'search' %>
               <% end %>
-            </center>
-    </div>
-
-      <%= yield %>
-
-      <div class="container-fluid">
-        <footer>
-          <div class="social">
-            <!-- 4:3 aspect ratio -->
-            <div
-              class="fb-like fb_iframe_widget"
-              data-href="https://www.facebook.com/suhbetjanna/"
-              data-width="64"
-              data-layout="button"
-              data-action="like"
-              data-size="small"
-              data-show-faces="true"
-              data-share="false"
-              fb-xfbml-state="rendered"
-              fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=931&amp;href=https%3A%2F%2Fwww.facebook.com%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=true&amp;size=small&amp;width=64">
-              <span style="vertical-align: bottom; width: 50px; height: 20px;">
-                <iframe
-                  name="f3bfda57b2dccbc"
-                  width="64px"
-                  height="1000px"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allowfullscreen="true"
-                  scrolling="no"
-                  title="fb:like Facebook Social Plugin"
-                  src="https://www.facebook.com/v2.10/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FhsBwMj6iLmk.js%3Fversion%3D42%23cb%3Dfc4419a0a0e47c%26domain%3Dmichalgarvey.bitballoon.com%26origin%3Dhttp%253A%252F%252Fmichalgarvey.bitballoon.com%252Ffe7a24a5f7be4%26relation%3Dparent.parent&amp;container_width=931&amp;href=https%3A%2F%2Fwww.facebook.com%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=true&amp;size=small&amp;width=64"
-                  style="border: none; visibility: visible; width: 50px; height: 20px;"
-                  class=""></iframe>
-              </span>
-              <a class="twitter-follow-button" href="https://twitter.com/abd120071664" data-show-count="false" data-show-screen-name="false">Follow @ENG.MARIAM</a>
-            </div>
-            &copy FOOD CO
-          </div>
-          <!--?<span class="hiddenSpellError" pre="" data-mce-bogus="1">php</span> esc_html_e( 'LinkedIn', '<span class="hiddenSpellError" pre="" data-mce-bogus="1">Divi</span>' ); ?-->
-        </footer>
+            </li>
+          </ul>
+        </div>
       </div>
-    </body>
-  </html>
+    </nav>
+
+  </div>
+  <br><br>
+<div><%=render 'layouts/messages' unless @index_page_in_simple_pages %></div>
+  <%= yield %>
+  <div class="container-fluid">
+    <footer>
+      <div class="social">
+        <!-- 4:3 aspect ratio -->
+        <div
+          class="fb-like fb_iframe_widget"
+          data-href="https://www.facebook.com/suhbetjanna/"
+          data-width="64"
+          data-layout="button"
+          data-action="like"
+          data-size="small"
+          data-show-faces="true"
+          data-share="false"
+          fb-xfbml-state="rendered"
+          fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=931&amp;href=https%3A%2F%2Fwww.facebook.com%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=true&amp;size=small&amp;width=64">
+          <span style="vertical-align: bottom; width: 50px; height: 20px;">
+            <iframe
+              name="f3bfda57b2dccbc"
+              width="64px"
+              height="1000px"
+              frameborder="0"
+              allowtransparency="true"
+              allowfullscreen="true"
+              scrolling="no"
+              title="fb:like Facebook Social Plugin"
+              src="https://www.facebook.com/v2.10/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FhsBwMj6iLmk.js%3Fversion%3D42%23cb%3Dfc4419a0a0e47c%26domain%3Dmichalgarvey.bitballoon.com%26origin%3Dhttp%253A%252F%252Fmichalgarvey.bitballoon.com%252Ffe7a24a5f7be4%26relation%3Dparent.parent&amp;container_width=931&amp;href=https%3A%2F%2Fwww.facebook.com%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=true&amp;size=small&amp;width=64"
+              style="border: none; visibility: visible; width: 50px; height: 20px;"
+              class=""></iframe>
+          </span>
+          <a class="twitter-follow-button" href="https://twitter.com/abd120071664" data-show-count="false" data-show-screen-name="false">Follow @ENG.MARIAM</a>
+        </div>
+        &copy FOOD CO
+      </div>
+      <!--?<span class="hiddenSpellError" pre="" data-mce-bogus="1">php</span> esc_html_e( 'LinkedIn', '<span class="hiddenSpellError" pre="" data-mce-bogus="1">Divi</span>' ); ?-->
+    </footer>
+  </div>
+</body>
+</html>
