@@ -1,14 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!-- <p>
   <strong>Name:</strong>
   <%= @user.name %>
 </p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <strong>last_name:</strong>
+  <%= @user.last_name %>
+</p> -->
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="container">
+<h2>Users</h2>
+  <p>The info of user</p>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>first Name</th>
+        <th>Email</th>
+        <th>last last_name</th>
+      </tr>
+    </thead>
+
+      <tr>
+        <td>  <%= @user.name %></td>
+        <td><%= @user.email %></td>
+        <td><%= @user.last_name %></td>
+        <td><%= link_to 'Edit', edit_user_path(@user) %> |</td>
+
+        <td><%= link_to 'Back', users_path %></td>
+      </tr>
+
+  </table>
+</div>

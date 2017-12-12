@@ -1,7 +1,8 @@
 $( document ).on('turbolinks:load', function() {
 
   $("#message1").css("background-color", "#FFF5EE");
-  $(".form-control").css("background-color", "#FFF5EE");
+  // $(".form-control").css("background-color", "#FFF5EE");
+
   $(".message-box").on("keyup", function() {
 
     var charCount = $(".message-box").val().length;

@@ -1,4 +1,8 @@
 class SimplePagesController < ApplicationController
+  def index
+    @index_page_in_simple_pages = true
+  end
+
   def landing_page
     @featured_product = Product.first
     @products = Product.limit(3)
