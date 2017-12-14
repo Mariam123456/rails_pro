@@ -1,11 +1,18 @@
 #pro{
-  // width:80%;
-  // background-color: #f0eded;
-  // height:100%;
-  // border: 1px solid blue;
-  padding: 20px;
-  // border-color: gray;
-  // margin-top: 100px;
+  padding-top: 80px;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 120px;
+}
+
+#header-product h3 {
+    color: #212121;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 0.5em;
+    position: relative;
+    font-size: 2.5em;
+    text-transform: uppercase;
 }
 #layout-row{
   padding-bottom: 30px;

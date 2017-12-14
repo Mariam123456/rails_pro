@@ -36,9 +36,12 @@
     </a>
   </div>
 </div>
-<p class="notice text-center text-primary"><%= notice %></p>
-<p class="alert text-center text-primary"><%= alert %></p>
-
+<% if notice %>
+    <p id="notice" class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert %>
+<p class="alert alert-warning" role="alert"><%= alert %></p>
+<% end %>
 <div class="container" id="header">
   <center>
     <h3>

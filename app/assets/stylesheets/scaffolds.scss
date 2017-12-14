@@ -85,13 +85,13 @@ label {
 
 #log_in_container{
 padding: 16px;
- border:1px solid #ccc;
+border:1px solid #ccc;
  width:50%;
 background: #F7F7F9;
 
 }
 #log_in_header h2{
-  text-align: center;
+text-align: center;
 color: #212121;
 padding-bottom: .5em;
 position: relative;
@@ -107,7 +107,9 @@ color: #999;
 display: block;
 width: 100%;
 }
-
+#main-auterization{
+  margin-top: 80px;
+}
 @media (max-width: 480px) {
 #log_in_container{
   width: 100%;

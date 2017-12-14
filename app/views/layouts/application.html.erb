@@ -57,14 +57,15 @@
               </li>
 
               <li>
+
                 <% if user_signed_in? %>
-                  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
                 <% else %>
-                  <%= link_to('Login', new_user_session_path) %>
+                  <%= link_to('Login ', new_user_session_path) %>
                 <% end %>
               </li>
 
-              <li style="padding-left:100px;">
+              <li  style="padding-left:100px;">
                 <%= form_with(url: products_path, method: 'get', local: true) do |form|%>
                 <%= form.text_field :q, id: 'q', value: params[:q],:class=>"input",placeholder: "Search for"%>
                 <%= form.submit 'search' %>
@@ -74,9 +75,7 @@
         </div>
       </div>
     </nav>
-
-  </div>
-  <br><br>
+<div></div>
 <div><%=render 'layouts/messages' unless @index_page_in_simple_pages %></div>
   <%= yield %>
   <div class="container-fluid">
