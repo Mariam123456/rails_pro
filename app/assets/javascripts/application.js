@@ -17,6 +17,7 @@
 //= require cable
 //= require script
 //= require_self
+
 $(document).ready(function(){
   console.log("page loaded succesully");
 
