@@ -14,9 +14,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery3
-//= require cable
-//= require script
-//= require_self
+//= require_tree .
 
 $(document).ready(function(){
   console.log("page loaded succesully");
