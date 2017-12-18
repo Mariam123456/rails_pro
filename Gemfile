@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem "figaro"
 gem 'devise'
 gem 'cancancan', '~> 1.10'
+gem 'ratyrate'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'sqlite3'

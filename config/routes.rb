@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
 devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', controllers: { registrations: "user_registrations" } }
   root 'simple_pages#index'
-  resources :users
-  resources :products
+  resources :products do
+  resources :comments
+end
+resources :users
   get 'simple_pages/product'
 
   get 'simple_pages/about'
