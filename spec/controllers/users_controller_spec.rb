@@ -1,12 +1,14 @@
 
-require 'rails_helper'
+# require 'rails_helper'
 
 # describe UsersController, type: :controller do
 #   let (:user) {User.create!(name: "mariam", email: "a@a.com", password: "123456")}
 #   describe 'GET #show' do
 #      context 'when a user is logged in' do
-    
-
+#      @user = FactoryGirl.create(:user)
+#       before do
+#         sign_in @user
+# end
 # end
 #      end
 

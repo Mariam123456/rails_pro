@@ -25,12 +25,6 @@ describe Product do
 			expect(User.new(name: "mariam")).not_to be_valid
 		end
 
-
-		it "is valid without last_name" do
-			expect(User.new(name: "mariam", email: "m@a.com", password: "123456")).to be_valid
-		end
-
-
 	end
 end
 
