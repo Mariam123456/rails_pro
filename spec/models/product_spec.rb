@@ -3,13 +3,13 @@ require 'rails_helper'
 describe Product do 
 	context 'when the product has comments' do
 		let (:product) {Product.create!(name:"mariam",price:"22",color:"red",description:"drink")}
-		let (:user) {User.create!(name: "mariam", email: "a@a.com", password: "123456")}
 
 
 		before do
-			product.comments.create!(rating: 1, user: user, body: "bad!")
-			product.comments.create!(rating:3 , user: user, body: "good!")
-			product.comments.create!(rating: 5, user: user, body: "great!")
+			@user = FactoryBot.create(:user)
+			product.comments.create!(rating: 1, user: @user, body: "bad!")
+			product.comments.create!(rating:3 , user: @user, body: "good!")
+			product.comments.create!(rating: 5, user: @user, body: "great!")
 			
 		end
 
@@ -24,7 +24,6 @@ describe Product do
 		it "is not valid without email" do
 			expect(User.new(name: "mariam")).not_to be_valid
 		end
-
 	end
 end
 
