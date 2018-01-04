@@ -18,10 +18,9 @@ describe Product do
 		
 
 		it "is not valid without email" do
-		  @user = FactoryBot.build(:user, email: "not_an_email")
+		  @user = FactoryBot.build(:user, email: "not_an_email" )
     		expect(@user).to_not be_valid
 		end
-
 	end
 end
 

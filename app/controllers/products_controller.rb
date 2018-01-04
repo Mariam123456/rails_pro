@@ -34,8 +34,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-
-    @order = Product.new(product_params)
+    @product = Product.new(product_params)
 
     respond_to do |format|
       if @product.save
@@ -47,6 +46,7 @@ class ProductsController < ApplicationController
       end
     end
   end
+  
 
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json

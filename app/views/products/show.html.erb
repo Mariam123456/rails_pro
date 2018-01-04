@@ -19,14 +19,17 @@
  <div class="price " style="margin: 0 0 2em;">
   <h4><%= @product.price %> $</h4>
 </div>
-
-
+<center>
+<%= form_with(url: '/payments/create') do |form| %>
+<%= hidden_field_tag(:product_id, @product.id) %>
+<%= render partial: "shared/stripe_checkout_button" %>
+<% end %>
+</center>
+</div>
 </p>
 </div> 
 </div>
-<%= form_with(url: '/payments/create') do |form| %>
-  <%= render partial: "shared/stripe_checkout_button" %>
-<% end %>
+
 <%= render 'new_comment' %>
 
 <%= render 'comments' %>
@@ -34,11 +37,11 @@
 <br>
 
 <div class="digg_pagination">
-    <div class="page_info">
-      <%= page_entries_info @comments %>
-    </div>
-    <%= will_paginate @comments, :container => false %>
+  <div class="page_info">
+    <%= page_entries_info @comments %>
   </div>
+  <%= will_paginate @comments, :container => false %>
+</div>
 
 <hr>
 
