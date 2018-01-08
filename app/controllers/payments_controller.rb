@@ -7,7 +7,7 @@ class PaymentsController < ApplicationController
 		token = params[:stripeToken]
 		begin
 		   charge = Stripe::Charge.create(
-                amount: (@product.price*100).to_i,
+                amount: (@product.price*100),
                 currency: "gbp",
                 source: token,
                 description: params[:stripeEmail]
@@ -17,7 +17,7 @@ class PaymentsController < ApplicationController
             Order.create(
               product_id: @product.id,
               user_id: @user.id,
-              total: @product.price
+              total: @product.price *100
             )
             flash[:success] = "Your payment was processed successfully"
         end

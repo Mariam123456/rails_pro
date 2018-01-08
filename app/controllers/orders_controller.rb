@@ -14,10 +14,8 @@ class OrdersController < ApplicationController
    @order = Order.new
  end
 
-
-
-
  def create
+  
   @order = Order.new(order_params)
 
   respond_to do |format|
@@ -29,7 +27,6 @@ class OrdersController < ApplicationController
       format.json { render json: @order.errors, status: :unprocessable_entity }
     end
   end
-
   def destroy
     @order.destroy
     respond_to do |format|
@@ -37,8 +34,6 @@ class OrdersController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
