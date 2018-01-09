@@ -1,14 +1,13 @@
 class PaymentsController < ApplicationController
 
-    def create
+def create
         @product = Product.find(params[:product_id])
         @user = current_user
 
         token = params[:stripeToken]
-         # Create the charge on Stripe's servers - this will charge the user's card
         begin
             charge = Stripe::Charge.create(
-                amount: (@product.price*100).to_i, # amount in cents, again
+                amount: (@product.price*100).to_i,
                 currency: "gbp",
                 source: token,
                 description: params[:stripeEmail]
@@ -18,9 +17,9 @@ class PaymentsController < ApplicationController
             Order.create(
               product_id: @product.id,
               user_id: @user.id,
-               total: @product.price
+              total: @product.price
             )
-            flash[:notice] = "Your payment was processed successfully"
+            flash[:success] = "Your payment was processed successfully"
         end
 
         rescue Stripe::CardError => e
@@ -31,7 +30,7 @@ class PaymentsController < ApplicationController
 
         redirect_to product_path(@product)
 
-    end
+end
 end
 
 
