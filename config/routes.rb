@@ -15,7 +15,7 @@ resources :users
   get 'simple_pages/index'
   get 'simple_pages/landing_page'
 
-post 'payments/create'
+  post 'payments/create'
   
   post 'simple_pages/thank_you'
   resources :orders, only: [:index, :show, :create, :destroy]
