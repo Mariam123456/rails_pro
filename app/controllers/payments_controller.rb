@@ -27,7 +27,7 @@ def create
       redirect_to new_charge_path
     end
 
-    redirect_to product_path(@product) , notice: 'Thank you for your order!'
+    
 end
 end
 
