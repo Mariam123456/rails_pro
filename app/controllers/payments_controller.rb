@@ -1,35 +1,33 @@
 class PaymentsController < ApplicationController
 
 def create
-        @product = Product.find(params[:product_id])
-        @user = current_user
+    @product = Product.find(params[:product_id])
+    @user = current_user
+    token = params[:stripeToken]
+    # Create the charge on Stripe's servers - this will charge the user's card
+    begin
+      charge = Stripe::Charge.create(
+        :source => token,
+        :amount => (@product.price * 100).to_i, # amount in cents, again
+        :currency => "eur",
+        :description => params[:stripeEmail]
+      )
 
-        token = params[:stripeToken]
-        begin
-            charge = Stripe::Charge.create(
-                amount: (@product.price*100).to_i,
-                currency: "gbp",
-                source: token,
-                description: params[:stripeEmail]
-            )
+    if charge.paid
+      Order.create(product_id: @product.id, user_id: @user.id, total: @product.price)
+      flash[:notice] = "success payment  #{@product.name}"
+    
+    end
 
-        if charge.paid
-            Order.create(
-              product_id: @product.id,
-              user_id: @user.id,
-              total: @product.price
-            )
-            flash[:success] = "Your payment was processed successfully"
-        end
+    rescue Stripe::CardError => e
+      # The card has been declined
+      body = e.json_body
+      err = body[:error]
+      flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
+      redirect_to new_charge_path
+    end
 
-        rescue Stripe::CardError => e
-            body = e.json_body
-            err = body[:error]
-            flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
-        end
-
-        redirect_to product_path(@product)
-
+    redirect_to product_path(@product) , notice: 'Thank you for your order!'
 end
 end
 
