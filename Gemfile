@@ -40,6 +40,7 @@ gem 'ratyrate'
 gem 'will_paginate', '~> 3.1.0'
 gem 'rails-controller-testing'
 gem 'stripe', '~> 3.8'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'sqlite3'
