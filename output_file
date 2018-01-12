@@ -1,0 +1,32 @@
+
+== Brakeman Report ==
+
+Application Path: /home/mariam/rails_project/myapp
+Rails Version: 5.1.4
+Brakeman Version: 4.1.1
+Scan Date: 2018-01-12 19:07:19 +0200
+Duration: 0.680293849 seconds
+Checks Run: BasicAuth, BasicAuthTimingAttack, ContentTag, CreateWith, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, DynamicFinders, EscapeFunction, Evaluation, Execute, FileAccess, FileDisclosure, FilterSkipping, ForgerySetting, HeaderDoS, I18nXSS, JRubyXML, JSONEncoding, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, MimeTypeDoS, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, NestedAttributesBypass, NumberToCurrency, PermitAttributes, QuoteTableName, Redirect, RegexDoS, Render, RenderDoS, RenderInline, ResponseSplitting, RouteDoS, SQL, SQLCVEs, SSLVerify, SafeBufferManipulation, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionManipulation, SessionSettings, SimpleFormat, SingleQuotes, SkipBeforeFilter, StripTags, SymbolDoSCVE, TranslateBug, UnsafeReflection, ValidationRegex, WithoutProtection, XMLDoS, YAMLParsing
+
+== Overview ==
+
+Controllers: 8
+Models: 10
+Templates: 40
+Errors: 0
+Security Warnings: 1
+
+== Warning Types ==
+
+Remote Code Execution: 1
+
+== Warnings ==
+
+Confidence: High
+Category: Remote Code Execution
+Check: UnsafeReflection
+Message: Unsafe reflection method constantize called with parameter value
+Code: params[:klass].classify.constantize
+File: app/controllers/rater_controller.rb
+Line: 5
+
