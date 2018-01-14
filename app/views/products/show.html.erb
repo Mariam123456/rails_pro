@@ -1,23 +1,14 @@
 
-
-
 <div class="container" id="pro">
   <p id="notice"><%= notice %></p>
   <div class="row ">
    <div class="col-md-4 agileinfo_single_left">
-      
-
-          <% if @product.image_url.present? %>
-
-  <%= image_tag( @product.image_url,width: "350px" ,Height:"350px", class: " MagicZoom img-zoom img-responsive center-img ", data_zoom_image: "@product.image_url",data_options:"zoomWidth:10px; zoomHeight:10px") %>
-
-
-
-
-<% end %>    
-   </div>
-   <div class="col-md-2"></div>
-   <div class="col-md-5 agileinfo_single_right ">
+    <% if @product.image_url.present? %>
+    <%= image_tag( @product.image_url,width: "350px" ,Height:"350px", class: " MagicZoom img-zoom img-responsive center-img ", data_zoom_image: "@product.image_url") %>
+    <% end %>    
+  </div>
+  <div class="col-md-2"></div>
+  <div class="col-md-5 agileinfo_single_right ">
     <center><h2><%= @product.name %></h2></center>
     <div class="average_rating" style="padding: 5px">
      <center><div class="rated" data-score="<%= @product.average_rating %>"></div></center> 
@@ -32,10 +23,10 @@
   <h4><%= @product.price %> $</h4>
 </div>
 <center>
-<%= form_with(url: '/payments/create') do |form| %>
-<%= hidden_field_tag(:product_id, @product.id) %>
-<%= render partial: "shared/stripe_checkout_button" %>
-<% end %>
+  <%= form_with(url: '/payments/create') do |form| %>
+  <%= hidden_field_tag(:product_id, @product.id) %>
+  <%= render partial: "shared/stripe_checkout_button" %>
+  <% end %>
 </center>
 </div>
 </p>
@@ -48,12 +39,12 @@
 <br>
 <br>
 <center>
-<div class="digg_pagination">
-  <div class="page_info">
-    <%= page_entries_info @comments %>
+  <div class="digg_pagination">
+    <div class="page_info">
+      <%= page_entries_info @comments %>
+    </div>
+    <%= will_paginate @comments, :container => false %>
   </div>
-  <%= will_paginate @comments, :container => false %>
-</div>
 </center>
 <hr>
 
