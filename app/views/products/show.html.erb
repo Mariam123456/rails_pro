@@ -1,8 +1,20 @@
+
+
+
 <div class="container" id="pro">
   <p id="notice"><%= notice %></p>
   <div class="row ">
    <div class="col-md-4 agileinfo_single_left">
-     <%= image_tag(@product.image_url, class: "img-responsive center-img") %>
+      
+
+          <% if @product.image_url.present? %>
+
+  <%= image_tag( @product.image_url,width: "350px" ,Height:"350px", class: " MagicZoom img-zoom img-responsive center-img ", data_zoom_image: "@product.image_url",data_options:"zoomWidth:10px; zoomHeight:10px") %>
+
+
+
+
+<% end %>    
    </div>
    <div class="col-md-2"></div>
    <div class="col-md-5 agileinfo_single_right ">
@@ -35,14 +47,14 @@
 <%= render 'comments' %>
 <br>
 <br>
-
+<center>
 <div class="digg_pagination">
   <div class="page_info">
     <%= page_entries_info @comments %>
   </div>
   <%= will_paginate @comments, :container => false %>
 </div>
-
+</center>
 <hr>
 
 <%= link_to 'Edit', edit_product_path(@product) %>
