@@ -5,9 +5,11 @@
 </div>
   <p id="notice"><%= notice %></p>
   <br>
-  <div class="row" >
+  <div class="row">
     <%@products.each do |product| %>
+     <div class="col-md-2">
       <%= render partial: "product", locals: {product: product} %>
+  </div>
     <% end %>
   </div>
   <center>
