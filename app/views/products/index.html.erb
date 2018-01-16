@@ -1,13 +1,13 @@
 <div class="container" id="pro">
 
-  <div class="container" id="header-product">
+  <!-- <div class="container" id="header-product"> -->
     <h3>Products</h3>
-</div>
+<!-- </div> -->
   <p id="notice"><%= notice %></p>
   <br>
   <div class="row">
     <%@products.each do |product| %>
-     <div class="col-md-2">
+     <div class="col-md-3">
       <%= render partial: "product", locals: {product: product} %>
   </div>
     <% end %>
