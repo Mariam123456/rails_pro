@@ -21,9 +21,6 @@ $(document).on('turbolinks:load ajaxSuccess', function() {
   lensShape : "round",
   lensSize    : 200
   }
-
-
-
   	);
   
 });
