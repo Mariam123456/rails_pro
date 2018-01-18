@@ -6,13 +6,17 @@
   <p id="notice"><%= notice %></p>
   <br>
   <div class="row">
+    <% cache(cache_key_for_products) do %>
     <%@products.each do |product| %>
-     <div class="col-md-3">
+     
       <%= render partial: "product", locals: {product: product} %>
-  </div>
+        <% end %>
+
     <% end %>
   </div>
   <center>
     <%= link_to 'New Product', new_product_path, class: "btn-primary" %>
   </center>
     </div>
+
+
