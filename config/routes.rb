@@ -21,6 +21,7 @@ resources :users
   post 'simple_pages/thank_you'
   resources :orders, only: [:index, :show, :create, :destroy]
   get 'orders/create'
+  mount ActionCable.server => '/cable'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
