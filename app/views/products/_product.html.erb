@@ -13,21 +13,19 @@
             <%= product.price %></h5>
         </div>
       </div>
-      <div class="row" style="padding-left: 16px;">
-        <%= link_to 'Show', product %>
-        <%= link_to 'Edit', edit_product_path(product) %>
-   
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-
-      </div>
+  
       <div class="separator clear-left">
         <p class="btn-add">
-          <i class="fa fa-shopping-cart"></i>
-          <a href="#" class="hidden-sm">Add to cart</a>
+          <i class="fa fa-edit"></i>
+         <%= link_to 'Edit', edit_product_path(product) %>
         </p>
         <p class="btn-details">
           <i class="fa fa-list"></i>
-          <a href="#" class="hidden-sm">More details</a>
+            <%= link_to 'Show', product %>
+        </p>
+    <p class="btn-remove">
+          <i class="fa fa-remove"></i>
+             <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
         </p>
       </div>
       <div class="clearfix"></div>

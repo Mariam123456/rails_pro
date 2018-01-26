@@ -32,11 +32,12 @@
 </p>
 </div> 
 </div>
-
-<%= render 'new_comment' %>
-
-<%= render 'comments' %>
 <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+<%= render 'new_comment' %>
+<%= render 'comments' %>
+<div class="row"> 
+  data-product-id="<%= @product.id %>"
+</div>
 <br>
 <br>
 <center>
@@ -46,14 +47,14 @@
     </div>
     <%= will_paginate @comments, :container => false %>
   </div>
-<h6><thanks for comment/h6>
+  <h6><thanks for comment/h6>
+  
+  <hr>
+
+  <div class="btn btn-info text-white"><%= link_to 'Edit', edit_product_path(@product) %> </div>
+
+ <div class="btn btn-info text-white"><%= link_to 'Back', products_path %></div>
 </center>
-<hr>
-
-<%= link_to 'Edit', edit_product_path(@product) %>
-
-<%= link_to 'Back', products_path %>
-
 </div>
 
 </div>

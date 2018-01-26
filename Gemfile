@@ -46,6 +46,7 @@ gem 'jquery-ui-rails'
 gem 'jquery-rails'
 gem 'dalli', '~> 2.7', '>= 2.7.6'
 gem 'redis-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'sqlite3'
