@@ -1,37 +1,22 @@
 <% cache product do %>
 <div class="col-md-3">
-  <div class="col-item">
-    <div class="photo">
-      <%= image_tag(product.image_url) unless product.image_url.blank? %>
-    </div>
-    <div class="col-item ">
+      <div class="card" style="width: 20rem;padding: 2em;box-shadow: 0px 0px 5px #b2afaf;margin: 7px">
+        <i class="fa fa-remove"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></i>
+   <center><%= image_tag(product.image_url ,class: "card-img-top" ,width: "100px" ,Height:"100px") unless product.image_url.blank? %></center>
+  <div class="card-block">
+    <h4 class="card-title"> <%= product.name %></h4>
+    <p class="card-text" style="height: 70px;"><%=product.description %></p>
       <div class="row">
-        <div class="price col-md-6">
-          <h5>
-            <%= product.name %></h5>
-          <h5 class="price-text-color">
-            <%= product.price %></h5>
+      <center><h5 class="price-text-color">
+          price:  <%= product.price %> $</h5></center>
+           <p class="btn-details">
+          <i class="fa fa-edit"></i>
+            <%= link_to 'Edit', edit_product_path(product) %>
+        </p>
         </div>
-      </div>
-      <div class="row" style="padding-left: 16px;">
-        <%= link_to 'Show', product %>
-        <%= link_to 'Edit', edit_product_path(product) %>
-   
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-
-      </div>
-      <div class="separator clear-left">
-        <p class="btn-add">
-          <i class="fa fa-shopping-cart"></i>
-          <a href="#" class="hidden-sm">Add to cart</a>
-        </p>
-        <p class="btn-details">
-          <i class="fa fa-list"></i>
-          <a href="#" class="hidden-sm">More details</a>
-        </p>
-      </div>
-      <div class="clearfix"></div>
-    </div>
+        </br>
+        <center><div class="btn btn-info text-white"><%= link_to 'Show', product %></div></center>       
   </div>
+</div>
 </div>
 <% end %>

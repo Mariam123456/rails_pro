@@ -1,9 +1,9 @@
 
 <div class="container" id="pro">
   <p id="notice"><%= notice %></p>
-  <div class="row " >
+  <div class="row " data-product-id="<%= @product.id %>">
    <div class="col-md-4 agileinfo_single_left">
-  <div class="row " >data-product-id="<%= @product.id %>"</div>
+
     <% if @product.image_url.present? %>
     <%= image_tag( @product.image_url,width: "350px" ,Height:"350px", class: " MagicZoom img-zoom img-responsive center-img ", data_zoom_image: "@product.image_url") %>
     <% end %>    
@@ -27,6 +27,7 @@
   <%= form_with(url: '/payments/create') do |form| %>
   <%= hidden_field_tag(:product_id, @product.id) %>
   <%= render partial: "shared/stripe_checkout_button" %>
+   <%= button_to 'Order Now', orders_path(product_id: @product.id, total: @product.price), class: 'btn btn-info' %>
   <% end %>
 </center>
 </div>
