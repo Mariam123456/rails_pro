@@ -1,8 +1,9 @@
 
 <div class="container" id="pro">
   <p id="notice"><%= notice %></p>
-  <div class="row ">
+  <div class="row " >
    <div class="col-md-4 agileinfo_single_left">
+  <div class="row " >data-product-id="<%= @product.id %>"</div>
     <% if @product.image_url.present? %>
     <%= image_tag( @product.image_url,width: "350px" ,Height:"350px", class: " MagicZoom img-zoom img-responsive center-img ", data_zoom_image: "@product.image_url") %>
     <% end %>    
