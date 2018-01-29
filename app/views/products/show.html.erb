@@ -27,8 +27,13 @@
   <%= form_with(url: '/payments/create') do |form| %>
   <%= hidden_field_tag(:product_id, @product.id) %>
   <%= render partial: "shared/stripe_checkout_button" %>
-   <%= button_to 'Order Now', orders_path(product_id: @product.id, total: @product.price), class: 'btn btn-info' %>
+
   <% end %>
+    <%= form_for(@orders) do |f| %>
+             <%=f.hidden_field :product_id, class: "form-control" , value:@product.id %>
+            <%=f.hidden_field :total, class: "form-control" , value:@product.price %>
+                <%=f.submit "order", class:"order-button btn btn-info" %>
+      <% end %>
 </center>
 </div>
 </p>
