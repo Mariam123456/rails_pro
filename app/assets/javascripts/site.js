@@ -1,4 +1,4 @@
-  alert('action cable doing');
+  
 var refreshRating = function() {
     $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
     $('.rated').raty({ path: '/assets',
@@ -11,6 +11,7 @@ var refreshRating = function() {
 
 
 $(document).on('turbolinks:load ajaxSuccess', function() {
+  alert('action cable doing');
   refreshRating()
   $(".img-zoom").elevateZoom({
    zoomWindowFadeIn: 500,
