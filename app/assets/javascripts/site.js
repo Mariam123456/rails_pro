@@ -11,7 +11,6 @@ var refreshRating = function() {
 
 
 $(document).on('turbolinks:load ajaxSuccess', function() {
-  alert('action cable doing');
   refreshRating()
   $(".img-zoom").elevateZoom({
    zoomWindowFadeIn: 500,
