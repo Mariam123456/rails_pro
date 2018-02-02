@@ -7,7 +7,8 @@ module ApplicationCable
       self.current_user = find_verified_user
     end
 
-    def disconnect; end
+    def disconnect
+    end
 
     protected
 
