@@ -1,8 +1,15 @@
 
 
-<h1>Editing User</h1>
-
+<div class="title-edit"><h2>Editing User</h2></div>
+<div class="container" style="padding: 16px;
+border: 1px solid #ccc;
+width: 50%;
+background: #F7F7F9;">
 <%= render 'form', user: @user %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+</div>
+<br>
+<center>
+<div class="btn btn-info btn-xs"><%= link_to 'Show', @user %> </div> |
+<div class="btn btn-info btn-xs"><%= link_to 'Back', users_path %></div>
+</center>
+</div>

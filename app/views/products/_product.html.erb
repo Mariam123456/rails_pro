@@ -1,7 +1,7 @@
 <% cache product do %>
 <div class="col-md-3">
       <div class="card" style="width: 20rem;padding: 2em;box-shadow: 0px 0px 5px #b2afaf;margin: 7px">
-        <i class="fa fa-remove"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></i>
+       
         </br>
    <center><%= image_tag(product.image_url ,class: "card-img-top" ,width: "100px" ,Height:"100px") unless product.image_url.blank? %></center>
   <div class="card-block">
@@ -10,14 +10,14 @@
       <div class="row">
       <center><h5 class="price-text-color">
           price:  <%= product.price %> $</h5></center>
-        <p class="btn-add">
-          <i class="fa fa-shopping-cart"></i>
-           <%= link_to 'Order Now' , orders_path(product_id: product.id, total: product.price) %>
-        </p>
-           <p class="btn-details">
+              <p class="btn-details">
           <i class="fa fa-edit"></i>
             <%= link_to 'Edit', edit_product_path(product) %>
         </p>
+        <p class="btn-add">
+          <i class="fa fa-remove"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></i>
+        </p>
+       
         </div>
         </br>
         <center><div class="btn btn-info text-white"><%= link_to 'Show', product %></div></center>       

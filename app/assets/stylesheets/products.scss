@@ -182,6 +182,17 @@ margin-bottom: 1em;
 font-weight: 700;
 
 }
+
+.title-review h2{
+font-size: 1.8em;
+color: #212121;
+line-height: 1.5em;
+text-transform: uppercase;
+margin-bottom: 1em;
+font-weight: 700;
+font-size: 2.5em;
+text-transform: uppercase;
+}
 .center-img{
 margin: 0 auto;
 }
@@ -195,13 +206,13 @@ text-align: center;
 
 //pagination
 .digg_pagination {
-  background: white;
+
   cursor: default;
   /* self-clearing method: */ }
   .digg_pagination a, .digg_pagination span, .digg_pagination em {
     padding: 0.2em 0.5em;
     display: block;
-    float: left;
+    float: right;
     margin-right: 1px; }
   .digg_pagination .disabled {
     color: #999999;
