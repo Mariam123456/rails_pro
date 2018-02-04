@@ -8,8 +8,8 @@
     <%= image_tag( @product.image_url,width: "350px" ,Height:"350px", class: " MagicZoom img-zoom img-responsive center-img ", data_zoom_image: "@product.image_url") %>
     <% end %>    
   </div>
-  <div class="col-md-2"></div>
-  <div class="col-md-5 agileinfo_single_right ">
+  <div class="col-md-2 "></div>
+  <div class="col-md-5   agileinfo_single_right ">
     <center><h2><%= @product.name %></h2></center>
     <div class="average_rating" style="padding: 5px">
      <center><div class="rated" data-score="<%= @product.average_rating %>"></div></center> 
@@ -36,9 +36,8 @@
       <% end %>
 </center>
 </div>
-</p>
+
 </div> 
-</div>
 <%= render 'new_comment' %>
 <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 <%= render 'comments' %>
@@ -51,14 +50,12 @@
     </div>
     <%= will_paginate @comments, :container => false %>
   </div>
-<h6><thanks for comment/h6>
+<h6>thanks for comment</h6>
 </center>
 <hr>
+<div class="btn btn-primary btn-xs"><%= link_to 'Edit', edit_product_path(@product) %></div>
 
-<%= link_to 'Edit', edit_product_path(@product) %>
-
-<%= link_to 'Back', products_path %>
-
+<div class="btn btn-primary btn-xs"><%= link_to 'Back', products_path %></div>
 </div>
 
-</div>
+
