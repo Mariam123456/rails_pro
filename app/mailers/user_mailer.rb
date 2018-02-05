@@ -5,8 +5,12 @@ class UserMailer < ApplicationMailer
 			:body => "You have new contact message from this email : #{email} with this message : #{message}")
 	end
 	def welcome(user)
+		@user = user
 		@appname = "food co market"
 		mail(to: user.email,
 			subject: "Welcome to #{@appname}!")
 	end
 end
+
+
+
