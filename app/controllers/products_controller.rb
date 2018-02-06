@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
   def show
     @orders = Order.new
     @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page =>10)
- # @product.viewed!
+    @product.viewed!
   end
 
   # GET /products/new

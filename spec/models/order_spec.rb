@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Order do 
 	context 'order model validation' do
 		let (:product) {Product.create!(name:"mariam",price:"22",color:"red",description:"drink")}
-		let (:user) {User.create!(name: "mariam", email: "a@a.com", password: "123456")}
+		let (:user) {User.create!(name: "mariam", email: "a@ann.cnnom", password: "123456")}
 		before do
 			product.orders.create!(product:product, user: user, total: 2.0)
 

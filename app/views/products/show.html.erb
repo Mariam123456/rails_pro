@@ -1,6 +1,6 @@
 
 <div class="container" id="pro">
-  <p id="notice"><%= notice %></p>
+
   <div class="row " data-product-id="<%= @product.id %>"> 
    <div class="col-md-4 agileinfo_single_left">
 
@@ -53,7 +53,12 @@ background: #f5f5f5;padding: 5em 0;">
     <%= will_paginate @comments, :container => false %>
   </div>
 <h6>thanks for comment</h6>
-
+<h6>  
+  Views:
+  <span class="badge">
+    <%= @product.views %>
+  </span>
+</h6> 
 <hr>
 <div class="btn btn-info btn-xs"><%= link_to 'Edit', edit_product_path(@product) %></div>
 
